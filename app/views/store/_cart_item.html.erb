@@ -1,0 +1,16 @@
+<% if cart_item == @current_item -%>
+		<%= start_hidden_element_if "tr", 
+					cart_item.quantity == 1 && action_name == "add_to_cart" && request.xhr?, 
+					:id => "current_item" %>
+<% else -%>
+	<tr>
+<% end -%>
+		<td><%=h cart_item.quantity %>&times;</td>
+ 		<td><%=h cart_item.title %></td>
+		<td><%= link_to_remote "-", 
+					{:url => {:action => "remove_from_cart", :id => cart_item.product_id}, 
+						:method => :post}, 
+					:href => url_for({:action => "remove_from_cart", :id => cart_item.product_id})
+					 %></td>
+		<td><%=h number_to_currency cart_item.price %></td>
+	</tr>
