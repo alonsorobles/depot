@@ -12,5 +12,5 @@
 						:method => :post}, 
 					:href => url_for({:action => "remove_from_cart", :id => cart_item.product_id})
 					 %></td>
-		<td><%=h number_to_currency cart_item.price %></td>
+		<td><%= number_to_currency cart_item.price %></td>
 	</tr>

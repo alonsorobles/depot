@@ -61,7 +61,7 @@ class StoreController < ApplicationController
       @order.add_line_items_from_cart(@cart)
       if @order.save
         session[:cart] = nil
-        redirect_to_index("Thank you for your order")
+        redirect_to_index(I18n.t("flash.thanks"))
       end
     else
       @order = Order.new
