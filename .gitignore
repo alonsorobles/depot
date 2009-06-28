@@ -3,3 +3,4 @@ log/test.log
 log/development.log
 log/production.log
 log/server.log
+db/*.sqlite3
