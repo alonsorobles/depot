@@ -1,7 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
+check:
+  name:   Check
+  value:  check
 
-two:
-  name: MyString
+credit_cart:
+  name:   Credit cart
+  value:  cc
+
+purchase_order:
+  name:   Purchase order
+  value:  po
