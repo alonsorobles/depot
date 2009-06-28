@@ -1,6 +1,6 @@
 .DS_Store
-log/test.log
-log/development.log
-log/production.log
-log/server.log
+log/*
+tmp/*
+config/database.yml
+config/app_config.yml
 db/*.sqlite3
