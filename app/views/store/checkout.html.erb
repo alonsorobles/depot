@@ -24,7 +24,7 @@
 			<div>
 				<%= form.label :pay_type, I18n.t("checkout.pay_type") + ":" %>
 				<%= form.select :pay_type,
-						PayType.all.collect {|pt| [pt.display_name, pt.value]},
+						PayType.all.collect {|pt| [pt.name, pt.value]},
 						:prompt => I18n.t("checkout.pay_prompt") %>
 			</div>
 			
